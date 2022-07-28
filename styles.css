@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+:root {
+
+    /* Colors */
+    --Darkcyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --Verydarkgrenn: hsl(156, 42%, 18%);
+    --White: hsl(0, 0%, 100%);
+
+    /* Fonts */
+    --Fraunces: 'Fraunces', serif;
+    --Monserrat:'Montserrat', sans-serif;
+}
+
+body {
+    background-color: var(--Cream);
+    font-size: 14px;
+}
+
+.contenedor {
+    width: 344px;
+    height: 612px;
+    margin: 20px auto;
+    background-color: var(--White);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.contenedor__product {
+    width: 100%;
+}
+
+.header {
+    margin: 0px 24px; 
+}
+
+.header__preview {
+    color: var(--Darkgrayishblue);
+    font-family: var(--Monserrat);
+    font-weight: 500;
+    letter-spacing: 3px;
+    font-size: 1em;
+    margin: 18px 0px 8px 0px;
+}
+
+.header__title {
+    font-family: var(--Fraunces);
+    line-height: 30px;
+    margin: 0px 0px 16px 0px;
+    font-size: 2.2em;
+    line-height: 34px;
+    color: var(--Verydarkblue);
+}
+
+.header__paragraf {
+    color: var(--Darkgrayishblue);
+    font-family: var(--Monserrat);
+    margin: 0px 0px 44px 0px;
+    font-size: 0.95em;
+}
+
+.price {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.price__new {
+    color: var(--Darkcyan);
+    font-family: var(--Fraunces);
+    font-size: 2.3em;
+}
+
+.price__old {
+    color: var(--Darkgrayishblue);
+    text-decoration: line-through;
+}
+
+.header__button {
+    width: 100%;
+    height: 48px;
+    margin-top: 16px;
+    background-color: var(--Darkcyan);
+    border: none;
+    border-radius: 8px;
+    color: var(--White);
+    font-family: var(--Monserrat);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.header__button:hover {
+    cursor: pointer;
+    background-color: var(--Verydarkgrenn);
+}
+
+
+
+/* Desktop */
+
+@media (min-width: 620px){
+    .contenedor {
+        width: 600px;
+        height: 451px;
+        display: flex;
+    }
+
+    .header {
+        margin: 0px 35px; 
+    }
+    
+    .contenedor__product {
+        width: 300px;
+        content: url(./images/image-product-desktop.jpg);
+    } 
+}
